@@ -1,0 +1,9 @@
+/* Styles for disabled/muted cards */
+.card.muted{
+  pointer-events:none;
+  opacity:.6;
+  filter:grayscale(.2);
+  cursor:default;
+}
+.card.muted .arrow{opacity:.6}
+.card.muted:hover,.card.muted:focus{transform:none;box-shadow:none;border-color:var(--line)}
