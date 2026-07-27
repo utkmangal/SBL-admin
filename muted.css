@@ -8,7 +8,19 @@
 .card.muted .arrow{opacity:.6}
 .card.muted:hover,.card.muted:focus{transform:none;box-shadow:none;border-color:var(--line)}
 
-/* Colors for newly added cards */
+/* Consistent blue/white palette for cards 02–07 */
+.cards .card:nth-child(2){background:#f4f8fc;color:var(--ink);border-color:#e6f2fb}
+.cards .card:nth-child(2) p,.cards .card:nth-child(2) .number{color:var(--muted)}
+
+.cards .card:nth-child(3){background:#dbeaf8;color:var(--ink);border-color:#c6e6f6}
+.cards .card:nth-child(3) p,.cards .card:nth-child(3) .number{color:var(--muted)}
+
+.cards .card:nth-child(4){background:#b6dff4;color:var(--ink);border-color:#9fcfeb}
+.cards .card:nth-child(4) p,.cards .card:nth-child(4) .number{color:var(--ink)}
+
+.cards .card:nth-child(5){background:#8bbce8;color:#fff;border-color:#7aaee0}
+.cards .card:nth-child(5) p,.cards .card:nth-child(5) .number{color:rgba(255,255,255,0.95)}
+
 .cards .card:nth-child(6){background:#0b4f7a;color:#fff;border-color:#0b4f7a}
 .cards .card:nth-child(6) p,.cards .card:nth-child(6) .number{color:rgba(255,255,255,0.95)}
 
