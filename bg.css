@@ -1,0 +1,18 @@
+/* Yonsei logo background (top-right watermark) */
+body::after{
+  content: "";
+  position:fixed;
+  top:30px;
+  right:0.75px;
+  width:520px;
+  height:520px;
+  pointer-events:none;
+  background-image:url('https://mail.yonsei.ac.kr/userImgV2/logo/imageFile_47ba99c5.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  opacity:.12;
+  z-index:0;
+}
+
+/* Ensure main content sits above the watermark */
+.shell{position:relative;z-index:1}
