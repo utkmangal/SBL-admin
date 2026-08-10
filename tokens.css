@@ -1,0 +1,47 @@
+/* Hallmark · macrostructure: Long Document · tone: editorial · anchor hue: cool blue · theme: Almanac · enrichment: none · nav: N3 · footer: Ft4 */
+:root {
+  color-scheme: light dark;
+  --color-paper: oklch(97% 0.008 230);
+  --color-paper-2: oklch(93% 0.012 230);
+  --color-surface: oklch(99% 0.006 230);
+  --color-rule: oklch(84% 0.012 230);
+  --color-muted: oklch(46% 0.012 230);
+  --color-ink: oklch(21% 0.012 230);
+  --color-accent: oklch(40% 0.14 245);
+  --color-focus: oklch(55% 0.15 245);
+  --color-on-accent: oklch(97% 0.008 230);
+  --font-display: "DM Serif Display", ui-serif, serif;
+  --font-body: "Pretendard", "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --radius-control: 0.5rem;
+  --radius-panel: 1rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --z-sticky: 200;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: oklch(15% 0.01 230);
+    --color-paper-2: oklch(20% 0.012 230);
+    --color-surface: oklch(18% 0.011 230);
+    --color-rule: oklch(31% 0.012 230);
+    --color-muted: oklch(73% 0.012 230);
+    --color-ink: oklch(94% 0.008 230);
+    --color-accent: oklch(75% 0.11 245);
+    --color-focus: oklch(78% 0.12 245);
+    --color-on-accent: oklch(15% 0.01 230);
+  }
+}
