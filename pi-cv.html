@@ -3,295 +3,1660 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curriculum vitae of Sung-Hwan Choi, D.D.S., Ph.D.">
-  <title>Sung-Hwan Choi</title>
+  <meta name="description" content="Curriculum vitae of Sung-Hwan Choi, D.D.S., Ph.D. — Symbiotic Biomaterials Lab, Yonsei University College of Dentistry">
+  <title>Sung-Hwan Choi, D.D.S., Ph.D. — Curriculum Vitae</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="tokens.css">
+
   <style>
-    /* Hallmark · macrostructure: Long Document · tone: editorial · anchor hue: cool blue */
+    /* Hallmark · macrostructure: Institutional Precision · tone: modern-minimal · anchor hue: clinical blue */
     :root {
-      --bg: var(--color-paper);
-      --surface: var(--color-surface);
-      --surface-soft: var(--color-paper-2);
-      --ink: var(--color-ink);
-      --muted: var(--color-muted);
-      --line: var(--color-rule);
-      --accent: var(--color-accent);
-      --max: 1380px;
-      --radius: var(--radius-panel);
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-soft: #f1f5f9;
+      --surface-accent: #e8f0fe;
+      --ink: #0f172a;
+      --muted: #475569;
+      --rule: #e2e8f0;
+      --accent: #002b66; /* Official Yonsei Blue */
+      --accent-dark: #001d47;
+      --accent-glow: rgba(0, 43, 102, 0.08);
+      --badge-bg: #ebf3fc;
+      --badge-border: #b6d2f5;
+      --badge-text: #002b66;
+      --max-width: 1320px;
+      --font-heading: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      --font-body: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
     }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --surface-soft: #0f172a;
+        --surface-accent: #1a2b4c;
+        --ink: #f8fafc;
+        --muted: #94a3b8;
+        --rule: #334155;
+        --accent: #5b96e6; /* Yonsei Accent Blue for Dark Mode */
+        --accent-dark: #8ab4f8;
+        --accent-glow: rgba(91, 150, 230, 0.15);
+        --badge-bg: rgba(91, 150, 230, 0.12);
+        --badge-border: rgba(91, 150, 230, 0.3);
+        --badge-text: #8ab4f8;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      }
+    }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; overflow-x: clip; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.6; overflow-x: clip; }
-    a { color: var(--accent); }
-    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-    .skip-link { position: absolute; left: 1rem; top: -4rem; padding: .65rem .85rem; background: var(--accent); color: var(--color-on-accent); border-radius: var(--radius-control); z-index: var(--z-sticky); }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+    a:hover { color: var(--accent-dark); text-decoration: underline; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      padding: 0.65rem 1rem;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      z-index: 999;
+      transition: top 0.2s ease;
+    }
     .skip-link:focus { top: 1rem; }
-    .page { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; padding: 2rem 0 4rem; }
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
-    .wordmark { color: var(--accent); font-family: var(--font-mono); font-size: .78rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
-    .actions { display: flex; gap: .6rem; }
-    .action { border: 1px solid var(--line); border-radius: var(--radius-control); padding: .55rem .85rem; background: var(--surface); color: var(--ink); font: inherit; text-decoration: none; cursor: pointer; white-space: nowrap; transition: color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out), transform var(--dur-micro) var(--ease-out); }
-    .action:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-    .action:active { transform: translateY(0); }
-    .hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .75fr); gap: 1.5rem; padding: clamp(1.5rem, 4vw, 3.5rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-    .hero h1 { max-width: 13ch; min-width: 0; overflow-wrap: anywhere; margin: 0; font-family: var(--font-display); font-size: clamp(2.7rem, 7vw, 5.5rem); font-style: normal; line-height: .98; letter-spacing: -.045em; }
-    .hero h1 span { color: var(--accent); }
-    .hero-subtitle { margin: 1.25rem 0 0; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.2rem); max-width: 42rem; }
-    .hero-list { margin: 1.4rem 0 0; padding: 0; list-style: none; color: var(--muted); }
-    .hero-list li { margin-top: .5rem; padding-left: 1.2rem; position: relative; }
-    .hero-list li::before { content: ""; width: .42rem; height: .42rem; position: absolute; left: 0; top: .65rem; border-radius: 50%; background: var(--accent); }
-    .metrics { display: flex; flex-wrap: wrap; align-items: end; gap: 1.25rem; margin-top: 1.75rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
-    .metric { display: grid; gap: .15rem; min-width: 8rem; }
-    .metric strong { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.65rem); font-weight: 400; line-height: 1; letter-spacing: -.03em; color: var(--ink); }
-    .metric span, .metrics-note { color: var(--muted); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .02em; }
-    .metrics-note { flex-basis: 100%; margin: .1rem 0 0; }
-    .metrics-note a { color: var(--accent); }
-    .contact { align-self: end; padding: 1.25rem; border: 1px solid var(--line); background: var(--surface-soft); border-radius: var(--radius); }
-    .contact h2 { margin: 0 0 .8rem; font-family: var(--font-mono); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
-    .contact-line { margin: .45rem 0; color: var(--muted); font-size: .92rem; overflow-wrap: anywhere; }
-    .contact-line:first-of-type { color: var(--ink); }
-    .contents { position: sticky; top: 1rem; z-index: var(--z-sticky); margin: 1rem 0 2rem; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: var(--radius-control); background: var(--surface); }
-    .contents ul { display: flex; gap: .5rem 1.15rem; margin: 0; padding: 0 .25rem; list-style: none; overflow-x: auto; }
-    .contents a { display: block; padding: .35rem 0; color: var(--muted); font-size: .78rem; text-decoration: none; white-space: nowrap; transition: color var(--dur-short) var(--ease-out); }
-    .contents a:hover { color: var(--accent); }
-    .cv-grid { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: start; }
-    .rail { position: sticky; top: 4.5rem; }
-    .rail h2 { margin: 0 0 .75rem; font-family: var(--font-mono); font-size: .82rem; color: var(--accent); letter-spacing: .1em; text-transform: uppercase; }
-    .rail p { margin: 0; color: var(--muted); font-size: .9rem; }
-    .rail-nav { display: grid; gap: .4rem; margin-top: 1.25rem; }
-    .rail-nav a { color: var(--muted); font-family: var(--font-mono); font-size: .78rem; text-decoration: none; white-space: nowrap; transition: color var(--dur-short) var(--ease-out); }
-    .rail-nav a:hover { color: var(--accent); }
-    .cv-section { scroll-margin-top: 6rem; padding: 2.4rem 0; border-top: 1px solid var(--line); }
-    .cv-section:first-child { padding-top: 0; border-top: 0; }
-    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
-    .section-heading h2 { margin: 0; font-family: var(--font-display); font-size: clamp(1.55rem, 3vw, 2.3rem); font-style: normal; letter-spacing: -.025em; }
-    .section-heading p { margin: 0; color: var(--muted); font-family: var(--font-mono); font-size: .78rem; }
-    .subsection-title { margin: 2rem 0 .8rem; color: var(--accent); font-family: var(--font-mono); font-size: .88rem; letter-spacing: .02em; }
-    .year-heading { margin: 1.7rem 0 .75rem; font-family: var(--font-display); font-size: 1.1rem; font-style: normal; color: var(--ink); }
-    .record-item { padding: .95rem 0; border-top: 1px solid var(--line); color: var(--muted); }
+
+    .page-container {
+      width: min(calc(100% - 2.5rem), var(--max-width));
+      margin: 0 auto;
+      padding: 2rem 0 5rem;
+    }
+
+    /* Topbar Navigation */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .wordmark-badge {
+      padding: 0.2rem 0.5rem;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid var(--badge-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+    }
+    .actions { display: flex; gap: 0.75rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: var(--radius-sm);
+      padding: 0.55rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-secondary {
+      border: 1px solid var(--rule);
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .btn-primary {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.85fr);
+      gap: 2rem;
+      padding: 2.25rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-title-group h1 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+    }
+    .hero-title-group h1 span { color: var(--accent); }
+    .hero-degrees {
+      display: block;
+      margin-top: 0.35rem;
+      font-family: var(--font-mono);
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+    }
+    .hero-subtitle {
+      margin: 0.65rem 0 1.25rem;
+      color: var(--muted);
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+    .badge-ykast {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.85rem;
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      border-radius: var(--radius-sm);
+      color: var(--badge-text);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Scholar Metric Dashboard */
+    .metrics-dashboard {
+      margin-top: 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    .metrics-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+    }
+    .metric-card {
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      background: var(--surface-soft);
+    }
+    .metric-card strong {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .metric-card span {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      padding: 1.5rem;
+      border: 1px solid var(--rule);
+      background: var(--surface-soft);
+      border-radius: var(--radius-md);
+      align-self: start;
+    }
+    .contact-card h2 {
+      margin: 0 0 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .contact-item {
+      display: grid;
+      grid-template-columns: 5.5rem minmax(0, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+    }
+    .contact-item:last-child { margin-bottom: 0; }
+    .contact-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .contact-val { color: var(--ink); overflow-wrap: anywhere; }
+
+    /* Single Unified Sticky Navbar */
+    .nav-bar {
+      position: sticky;
+      top: 0.75rem;
+      z-index: var(--z-sticky);
+      margin: 1.75rem 0 2.5rem;
+      padding: 0.4rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-sm);
+    }
+    @media (prefers-color-scheme: dark) {
+      .nav-bar { background: rgba(30, 41, 59, 0.92); }
+    }
+    .nav-bar ul {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow-x: auto;
+    }
+    .nav-bar a {
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .nav-bar a:hover {
+      background: var(--surface-soft);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Main Content Layout Grid */
+    .cv-layout {
+      display: grid;
+      grid-template-columns: 14rem minmax(0, 1fr);
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .cv-rail {
+      position: sticky;
+      top: 5.5rem;
+      padding-right: 1rem;
+      border-right: 1px solid var(--rule);
+    }
+    .cv-rail h2 {
+      margin: 0 0 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .cv-rail p { margin: 0; color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+
+    /* CV Section Scaffolding */
+    .cv-section {
+      scroll-margin-top: 5.5rem;
+      padding-bottom: 3.5rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .cv-section:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    .section-header h2 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .subsection-header {
+      margin: 2.25rem 0 1.25rem;
+      padding: 0.4rem 0.75rem;
+      background: var(--surface-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .year-heading {
+      margin: 2rem 0 1rem;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .year-heading::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* Structured 2-Column Record Item Scaffolding */
+    .record-item {
+      display: grid;
+      grid-template-columns: 11rem minmax(0, 1fr);
+      gap: 1.25rem;
+      padding: 1.1rem 0;
+      border-top: 1px solid var(--rule);
+    }
     .record-item:first-of-type { border-top: 0; padding-top: 0; }
-    .field-label { color: var(--ink); font-weight: 700; }
-    .publication { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: .75rem; padding: .8rem 0; border-top: 1px solid var(--line); }
-    .publication-number { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 750; }
-    .publication p { margin: 0; color: var(--muted); }
-    .publication-note { color: var(--muted); }
-    .source-note { margin-top: 2rem; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: var(--radius-control); background: var(--surface-soft); color: var(--muted); font-size: .88rem; }
-    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
-    @media (max-width: 860px) {
-      .page { width: min(calc(100% - 1.25rem), var(--max)); padding-top: 1rem; }
-      .hero { grid-template-columns: 1fr; }
-      .hero h1 { max-width: 16ch; }
-      .contact { max-width: 34rem; }
-      .cv-grid { grid-template-columns: 1fr; }
-      .rail { display: none; }
+
+    .record-date {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 600;
+      line-height: 1.5;
     }
-    @media (max-width: 560px) {
-      .topbar { align-items: flex-start; }
-      .actions .action:last-child { display: none; }
-      .hero { padding: 1.25rem; }
-      .hero h1 { font-size: clamp(2.55rem, 15vw, 4.8rem); }
-      .contents { top: .5rem; }
-      .section-heading { display: block; }
-      .section-heading p { margin-top: .35rem; }
-      .publication { grid-template-columns: 1.8rem minmax(0, 1fr); gap: .55rem; }
+    .record-details { color: var(--ink); }
+    .record-title { font-weight: 600; font-size: 0.98rem; }
+    .record-org { color: var(--muted); font-size: 0.92rem; margin-top: 0.2rem; }
+
+    /* Grant Card Enhancements */
+    .grant-card {
+      padding: 1.25rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
     }
+    .grant-card:last-child { margin-bottom: 0; }
+    .grant-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .grant-date {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .grant-role-badge {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      color: var(--badge-text);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+    .grant-title {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--ink);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .grant-agency {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* Publication Items & Impact Badges */
+    .publication-item {
+      display: grid;
+      grid-template-columns: 2.75rem minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-top: 1px solid var(--rule);
+    }
+    .publication-item:first-of-type { border-top: 0; padding-top: 0; }
+
+    .publication-num {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .publication-content {
+      color: var(--ink);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+    .publication-authors { color: var(--ink); }
+    .publication-title { font-weight: 600; }
+    .publication-journal { font-style: italic; color: var(--muted); }
+    .publication-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      align-items: center;
+    }
+
+    .badge-impact {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.55rem;
+      background: #ebf3fc;
+      border: 1px solid #b6d2f5;
+      color: #002b66;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+    .badge-jcr {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.55rem;
+      background: #ecfeff;
+      border: 1px solid #a5f3fc;
+      color: #0e7490;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.55rem;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+    @media (prefers-color-scheme: dark) {
+      .badge-impact { background: rgba(91, 150, 230, 0.15); border-color: rgba(91, 150, 230, 0.3); color: #8ab4f8; }
+      .badge-jcr { background: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.3); color: #67e8f9; }
+      .badge-status { background: rgba(148, 163, 184, 0.15); border-color: rgba(148, 163, 184, 0.3); color: #cbd5e1; }
+    }
+
+    .footer {
+      margin-top: 4rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .cv-layout { grid-template-columns: 1fr; gap: 0; }
+      .cv-rail { display: none; }
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 1.5rem; }
+      .metrics-grid { grid-template-columns: repeat(3, 1fr); }
+      .record-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    }
+    @media (max-width: 520px) {
+      .topbar { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+      .publication-item { grid-template-columns: 2rem minmax(0, 1fr); gap: 0.65rem; }
+    }
+
     @media print {
-      :root { color-scheme: light; }
-      body { background: var(--color-paper); }
-      .page { width: 100%; padding: 0; }
-      .topbar, .contents, .rail, .actions { display: none; }
-      .hero { border: 0; padding: 0 0 1rem; border-radius: 0; }
-      .hero h1 { font-size: 3.7rem; }
-      .cv-grid { display: block; }
-      .cv-section { break-inside: avoid; }
-      .source-note { display: none; }
+      body { background: #ffffff; color: #000000; }
+      .page-container { width: 100%; padding: 0; }
+      .topbar, .nav-bar, .cv-rail, .actions { display: none !important; }
+      .hero { border: 0; padding: 0; box-shadow: none; }
+      .cv-layout { display: block; }
+      .cv-section { break-inside: avoid; border-bottom: 1px solid #ccc; padding-bottom: 2rem; margin-bottom: 2rem; }
+      .grant-card { border: 1px solid #ccc; box-shadow: none; }
     }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#cv-content">Skip to CV content</a>
-  <main class="page">
+
+  <div class="page-container">
+    <!-- Topbar Header -->
     <header class="topbar">
-      <div class="wordmark">Symbiotic Biomaterials Lab</div>
+      <div class="wordmark">
+        Symbiotic Biomaterials Lab
+        <span class="wordmark-badge">Yonsei University College of Dentistry</span>
+      </div>
       <div class="actions">
-        <a class="action" href="index.html">Back to portal</a>
-        <button class="action" type="button" onclick="window.print()">Print / save PDF</button>
+        <a class="btn btn-secondary" href="index.html">← Back to Portal</a>
+        <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save PDF</button>
       </div>
     </header>
 
+    <!-- Hero Header Banner -->
     <section class="hero" aria-labelledby="cv-title">
-      <div>
-        <h1 id="cv-title">Sung-Hwan <span>Choi</span></h1>
-        <p class="hero-subtitle">Curriculum Vitae · D.D.S., Ph.D.</p>
-        <ul class="hero-list"><li>Member, The Young Academy of Science and Technology of Korea (Y-KAST)</li></ul>
+      <div class="hero-title-group">
+        <h1 id="cv-title">
+          Sung-Hwan <span>Choi</span>
+          <span class="hero-degrees">D.D.S., Ph.D.</span>
+        </h1>
+        <p class="hero-subtitle">Professor, Department of Orthodontics · Yonsei University College of Dentistry</p>
         
-        <div class="metrics" aria-label="Google Scholar metrics">
-          <div class="metric"><strong>4,619</strong><span>Total citations</span></div>
-          <div class="metric"><strong>38</strong><span>h-index</span></div>
-          <div class="metric"><strong>109</strong><span>i10-index</span></div>
-          <p class="metrics-note"><a href="https://scholar.google.com/citations?user=sT5UBXwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a></p>
+        <div class="badge-ykast">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Elected Member, The Young Academy of Science and Technology of Korea (Y-KAST)
+        </div>
+
+        <div class="metrics-dashboard" aria-label="Google Scholar Citation Dashboard">
+          <div class="metrics-header">
+            <span>Google Scholar Impact</span>
+            <a href="https://scholar.google.com/citations?user=sT5UBXwAAAAJ&amp;hl=en" target="_blank" rel="noopener">View Full Profile ↗</a>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <strong>4,619</strong>
+              <span>Total Citations</span>
+            </div>
+            <div class="metric-card">
+              <strong>38</strong>
+              <span>h-index</span>
+            </div>
+            <div class="metric-card">
+              <strong>109</strong>
+              <span>i10-index</span>
+            </div>
+          </div>
         </div>
       </div>
-      <aside class="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact information</h2>
-        <p class="contact-line"><strong class="field-label">Address:</strong> Department of Orthodontics, Yonsei University College of Dentistry, 50-1 Yonsei-ro, Seodaemun-gu, Seoul 03722, Republic of Korea</p>
-<p class="contact-line"><strong class="field-label">Phone:</strong> +82-2-2228-3102</p>
-<p class="contact-line"><strong class="field-label">Email:</strong> selfexam@yuhs.ac</p>
+
+      <!-- Contact Card -->
+      <aside class="contact-card" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Information</h2>
+        <div class="contact-item">
+          <span class="contact-label">Address</span>
+          <span class="contact-val">Department of Orthodontics, Yonsei University College of Dentistry, 50-1 Yonsei-ro, Seodaemun-gu, Seoul 03722, Republic of Korea</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <span class="contact-val">+82-2-2228-3102</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-val"><a href="mailto:selfexam@yuhs.ac">selfexam@yuhs.ac</a></span>
+        </div>
       </aside>
     </section>
 
-    <nav class="contents" aria-label="CV sections">
+    <!-- Single Unified Sticky Section Navigation -->
+    <nav class="nav-bar" aria-label="CV section navigation">
       <ul>
         <li><a href="#education">Education</a></li>
         <li><a href="#positions">Positions</a></li>
         <li><a href="#appointments">Appointments</a></li>
-        <li><a href="#honors">Honors</a></li>
-        <li><a href="#grants">Grants</a></li>
+        <li><a href="#honors">Honors &amp; Awards</a></li>
+        <li><a href="#grants">Grants &amp; Support</a></li>
         <li><a href="#publications">Publications</a></li>
       </ul>
     </nav>
 
-    <div class="cv-grid" id="cv-content">
-      <aside class="rail">
-        <h2>Curriculum vitae</h2>
-        <p>Academic appointments, research support, and selected peer-reviewed publications.</p>
-        <nav class="rail-nav" aria-label="CV section navigation">
-          <a href="#education">Education</a>
-          <a href="#positions">Positions</a>
-          <a href="#appointments">Appointments</a>
-          <a href="#honors">Honors</a>
-          <a href="#grants">Grants</a>
-          <a href="#publications">Publications</a>
-        </nav>
+    <!-- Main Content Layout -->
+    <div class="cv-layout" id="cv-content">
+      <!-- Desktop Sidebar Rail -->
+      <aside class="cv-rail">
+        <h2>Curriculum Vitae</h2>
+        <p>Academic appointments, research support, and peer-reviewed publications for Dr. Sung-Hwan Choi.</p>
       </aside>
 
-      <div>
+      <!-- Main Document Sections -->
+      <main>
+        <!-- Education -->
         <section class="cv-section" id="education">
-          <div class="section-heading"><h2>Education</h2></div>
-          <article class="record-item">Mar. 2002 - Feb. 2008 Doctor of Dental Surgery (D.D.S.), Dentistry Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
-<article class="record-item">Sep. 2009 - Aug. 2011 Master of Science (M.S.), Orthodontics Graduate School, Yonsei University, Seoul, Republic of Korea</article>
-<article class="record-item">Sep. 2014 - Feb. 2017 Doctor of Philosophy (Ph.D.), Orthodontics Graduate School, Yonsei University, Seoul, Republic of Korea</article>
+          <div class="section-header">
+            <h2>Education</h2>
+            <p>Academic degrees &amp; clinical training</p>
+          </div>
+          
+          <article class="record-item">
+            <div class="record-date">Mar. 2002 – Feb. 2008</div>
+            <div class="record-details">
+              <div class="record-title">Doctor of Dental Surgery (D.D.S.), Dentistry</div>
+              <div class="record-org">Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">Sep. 2009 – Aug. 2011</div>
+            <div class="record-details">
+              <div class="record-title">Master of Science (M.S.), Orthodontics</div>
+              <div class="record-org">Graduate School, Yonsei University, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">Sep. 2014 – Feb. 2017</div>
+            <div class="record-details">
+              <div class="record-title">Doctor of Philosophy (Ph.D.), Orthodontics</div>
+              <div class="record-org">Graduate School, Yonsei University, Seoul, Republic of Korea</div>
+            </div>
+          </article>
         </section>
+
+        <!-- Positions and Employment -->
         <section class="cv-section" id="positions">
-          <div class="section-heading"><h2>Positions and employment</h2></div>
-          <article class="record-item">2015 - 2017 Lecturer, Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
-<article class="record-item">2017 - 2018 Clinical Assistant Professor, Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
-<article class="record-item">2018 - 2022 Assistant Professor, Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
-<article class="record-item">2022 - 2025 Associate Professor, Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
-<article class="record-item">2025 - Present Professor, Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
-<article class="record-item">2025 - 2026 Visiting Professor, Center for Systems Biology, Massachusetts General Hospital / Harvard Medical School, MA, USA</article>
+          <div class="section-header">
+            <h2>Positions and Employment</h2>
+            <p>Academic faculty &amp; visiting appointments</p>
+          </div>
+
+          <article class="record-item">
+            <div class="record-date">2015 – 2017</div>
+            <div class="record-details">
+              <div class="record-title">Lecturer</div>
+              <div class="record-org">Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2017 – 2018</div>
+            <div class="record-details">
+              <div class="record-title">Clinical Assistant Professor</div>
+              <div class="record-org">Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2018 – 2022</div>
+            <div class="record-details">
+              <div class="record-title">Assistant Professor</div>
+              <div class="record-org">Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2022 – 2025</div>
+            <div class="record-details">
+              <div class="record-title">Associate Professor</div>
+              <div class="record-org">Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2025 – Present</div>
+            <div class="record-details">
+              <div class="record-title">Professor</div>
+              <div class="record-org">Department of Orthodontics and Institute of Craniofacial Deformity, Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2025 – 2026</div>
+            <div class="record-details">
+              <div class="record-title">Visiting Professor</div>
+              <div class="record-org">Center for Systems Biology, Massachusetts General Hospital / Harvard Medical School, MA, USA</div>
+            </div>
+          </article>
         </section>
+
+        <!-- Administrative Appointments -->
         <section class="cv-section" id="appointments">
-          <div class="section-heading"><h2>Administrative appointments</h2></div>
-          <article class="record-item">2022 - 2025 Associate Dean of Student Affairs, Yonsei University College of Dentistry, Seoul, Republic of Korea</article>
+          <div class="section-header">
+            <h2>Administrative Appointments</h2>
+            <p>University governance &amp; leadership</p>
+          </div>
+
+          <article class="record-item">
+            <div class="record-date">2022 – 2025</div>
+            <div class="record-details">
+              <div class="record-title">Associate Dean of Student Affairs</div>
+              <div class="record-org">Yonsei University College of Dentistry, Seoul, Republic of Korea</div>
+            </div>
+          </article>
         </section>
+
+        <!-- Honors and Awards -->
         <section class="cv-section" id="honors">
-          <div class="section-heading"><h2>Honors and awards</h2></div>
-          <article class="record-item">2017 Young Researcher Award, Korean Dental Association, Seoul, Republic of Korea</article>
-<article class="record-item">2018 Young Researcher Award, Korean Association of Orthodontists, Seoul, Republic of Korea</article>
-<article class="record-item">2019 Minister’s Commendation for Young Researcher Achievement, Ministry of Health and Welfare, Republic of Korea</article>
-<article class="record-item">2021 The 17th Yeonsong Dental Award (Gold Prize), Korean Academy of Dental Science, Seoul, Republic of Korea</article>
-<article class="record-item">2023 The 3rd MINEC Academic Award (Grand Prize), Korean Academy of Dental Science, Seoul, Republic of Korea</article>
-<article class="record-item">2024 Elected Member, The Young Academy of Science and Technology of Korea (Y-KAST)</article>
+          <div class="section-header">
+            <h2>Honors and Awards</h2>
+            <p>Academic recognition &amp; distinctions</p>
+          </div>
+
+          <article class="record-item">
+            <div class="record-date">2017</div>
+            <div class="record-details">
+              <div class="record-title">Young Researcher Award</div>
+              <div class="record-org">Korean Dental Association, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2018</div>
+            <div class="record-details">
+              <div class="record-title">Young Researcher Award</div>
+              <div class="record-org">Korean Association of Orthodontists, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2019</div>
+            <div class="record-details">
+              <div class="record-title">Minister’s Commendation for Young Researcher Achievement</div>
+              <div class="record-org">Ministry of Health and Welfare, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2021</div>
+            <div class="record-details">
+              <div class="record-title">The 17th Yeonsong Dental Award (Gold Prize)</div>
+              <div class="record-org">Korean Academy of Dental Science, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2023</div>
+            <div class="record-details">
+              <div class="record-title">The 3rd MINEC Academic Award (Grand Prize)</div>
+              <div class="record-org">Korean Academy of Dental Science, Seoul, Republic of Korea</div>
+            </div>
+          </article>
+
+          <article class="record-item">
+            <div class="record-date">2024</div>
+            <div class="record-details">
+              <div class="record-title">Elected Member</div>
+              <div class="record-org">The Young Academy of Science and Technology of Korea (Y-KAST)</div>
+            </div>
+          </article>
         </section>
+
+        <!-- Research Grants and Support -->
         <section class="cv-section" id="grants">
-          <div class="section-heading"><h2>Research grants and support</h2><p>PI and Co-PI projects</p></div>
-          <h3 class="subsection-title">As Principal Investigator (PI)</h3>
-<article class="record-item">2018 - 2021 <strong class="field-label">Project Title:</strong> Research on Protein- and Biofilm-Repellent Properties in Dental Biomaterials Using Zwitterions <strong class="field-label">Funding Agency:</strong> National Research Foundation of Korea (NRF), Republic of Korea <strong class="field-label">Role:</strong> Principal Investigator (PI)</article>
-<article class="record-item">2020 - 2022 <strong class="field-label">Project Title:</strong> Development of Core Technology for Dental iPMMA to Suppress Biofilm Adhesion <strong class="field-label">Funding Agency:</strong> Korea Medical Device Development Fund (KMDF), Republic of Korea <strong class="field-label">Role:</strong> Principal Investigator (PI)</article>
-<article class="record-item">2021 - 2026 <strong class="field-label">Project Title:</strong> Research on Antifouling and Bioactive Dental Biomaterials Using a Zwitterionic Network Modifier <strong class="field-label">Funding Agency:</strong> National Research Foundation of Korea (NRF), Republic of Korea <strong class="field-label">Role:</strong> Principal Investigator (PI)</article>
-<article class="record-item">2023 - 2025 <strong class="field-label">Project Title:</strong> Development of Biofilm-Repellent Dental CAD/CAM Blocks and Anti-Cariogenic Bioactive Cements <strong class="field-label">Funding Agency:</strong> Korea Medical Device Development Fund (KMDF), Republic of Korea <strong class="field-label">Role:</strong> Principal Investigator (PI)</article>
-<article class="record-item">2023 - Present <strong class="field-label">Project Title:</strong> Development of Symbiotic Biocompatible Medical Device Materials and Productization Technology for Patient-Customized Direct-Printed Biliary Stents and Orthodontic Appliances <strong class="field-label">Funding Agency:</strong> Ministry of Trade, Industry and Energy (MOTIE), Republic of Korea <strong class="field-label">Role:</strong> Principal Investigator (PI)</article>
-<h3 class="subsection-title">As Co-Principal Investigator (Co-PI)</h3>
-<article class="record-item">2023 - 2026 <strong class="field-label">Project Title:</strong> Research Center for the Autonomic Nervous System and Bone Homeostasis Project <strong class="field-label">Funding Agency:</strong> National Research Foundation of Korea (NRF), Republic of Korea <strong class="field-label">Role:</strong> Co-Principal Investigator (Co-PI)</article>
-<article class="record-item">2025 - Present <strong class="field-label">Project Title:</strong> Development of Commercialized Convergence Medical Products for Oral Disease Treatment <strong class="field-label">Funding Agency:</strong> Regional Innovation System &amp; Education (RISE) Program through the Gangwon RISE Center, funded by the Ministry of Education (MOE) and Gangwon State, Republic of Korea <strong class="field-label">Role:</strong> Co-Principal Investigator (Co-PI)</article>
+          <div class="section-header">
+            <h2>Research Grants and Support</h2>
+            <p>PI &amp; Co-PI research projects</p>
+          </div>
+
+          <div class="subsection-header">As Principal Investigator (PI)</div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2018 – 2021</span>
+              <span class="grant-role-badge">Principal Investigator (PI)</span>
+            </div>
+            <div class="grant-title">Research on Protein- and Biofilm-Repellent Properties in Dental Biomaterials Using Zwitterions</div>
+            <div class="grant-agency">Funding Agency: National Research Foundation of Korea (NRF), Republic of Korea</div>
+          </div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2020 – 2022</span>
+              <span class="grant-role-badge">Principal Investigator (PI)</span>
+            </div>
+            <div class="grant-title">Development of Core Technology for Dental iPMMA to Suppress Biofilm Adhesion</div>
+            <div class="grant-agency">Funding Agency: Korea Medical Device Development Fund (KMDF), Republic of Korea</div>
+          </div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2021 – 2026</span>
+              <span class="grant-role-badge">Principal Investigator (PI)</span>
+            </div>
+            <div class="grant-title">Research on Antifouling and Bioactive Dental Biomaterials Using a Zwitterionic Network Modifier</div>
+            <div class="grant-agency">Funding Agency: National Research Foundation of Korea (NRF), Republic of Korea</div>
+          </div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2023 – 2025</span>
+              <span class="grant-role-badge">Principal Investigator (PI)</span>
+            </div>
+            <div class="grant-title">Development of Biofilm-Repellent Dental CAD/CAM Blocks and Anti-Cariogenic Bioactive Cements</div>
+            <div class="grant-agency">Funding Agency: Korea Medical Device Development Fund (KMDF), Republic of Korea</div>
+          </div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2023 – Present</span>
+              <span class="grant-role-badge">Principal Investigator (PI)</span>
+            </div>
+            <div class="grant-title">Development of Symbiotic Biocompatible Medical Device Materials and Productization Technology for Patient-Customized Direct-Printed Biliary Stents and Orthodontic Appliances</div>
+            <div class="grant-agency">Funding Agency: Ministry of Trade, Industry and Energy (MOTIE), Republic of Korea</div>
+          </div>
+
+          <div class="subsection-header">As Co-Principal Investigator (Co-PI)</div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2023 – 2026</span>
+              <span class="grant-role-badge">Co-Principal Investigator (Co-PI)</span>
+            </div>
+            <div class="grant-title">Research Center for the Autonomic Nervous System and Bone Homeostasis Project</div>
+            <div class="grant-agency">Funding Agency: National Research Foundation of Korea (NRF), Republic of Korea</div>
+          </div>
+
+          <div class="grant-card">
+            <div class="grant-header">
+              <span class="grant-date">2025 – Present</span>
+              <span class="grant-role-badge">Co-Principal Investigator (Co-PI)</span>
+            </div>
+            <div class="grant-title">Development of Commercialized Convergence Medical Products for Oral Disease Treatment</div>
+            <div class="grant-agency">Funding Agency: Regional Innovation System &amp; Education (RISE) Program through the Gangwon RISE Center, funded by MOE &amp; Gangwon State, Republic of Korea</div>
+          </div>
         </section>
+
+        <!-- Peer-reviewed Publications -->
         <section class="cv-section" id="publications">
-          <div class="section-heading"><h2>Peer-reviewed publications</h2></div>
-          <h3 class="subsection-title">Selected High-Impact Publications (As Corresponding Author)</h3>
-<article class="publication"><span class="publication-number">1</span><p>Choi W, Mangal U, Cha JK, Cho H, Ryu JH, Kim JY, Koh WG, Lee KJ, Kim KW, Choi SH*, Traverso G, Hong J. &quot;A Mucosa-Inspired Dynamic Biointerface Engineering a Biofilm-Preventive Niche against Pathogenic Microbiome Dysbiosis.&quot; Advanced Materials. 2026. In Press (Accepted). (IF: 29.1, JCR Top 2%)</p></article>
-<article class="publication"><span class="publication-number">2</span><p>Lee MY, Mangal U, Yoon HW, Im H, Choi SH*, Kwon JS, Shin SJ. &quot;Microfluidic pulp platform with vascular integration to evaluate biofunctional material.&quot; Biomaterials. 2026;334:124221. (IF: 13.6, JCR Top 6%)</p></article>
-<article class="publication"><span class="publication-number">3</span><p>Choi W, Mangal U, Yu JH, Ryu JH, Kim JY, Jun T, Lee Y, Cho H, Choi M, Lee M, Ryu DY, Lee SY, Jung SY, Cha JK, Cha JY, Lee KJ, Lee S, Choi SH*, Hong J. &quot;Viscoelastic and antimicrobial dental care bioplastic with recyclable life cycle.&quot; Nature Communications. 2024;15(1):9205. (IF: 18.1, JCR Top 6%)</p></article>
-<article class="publication"><span class="publication-number">4</span><p>Ryu JH, Mangal U, Kwon JS, Seo JY, Byun SY, Lee YH, Jang S, Hwang G, Ku H, Shin Y, Kim D, Choi SH*. &quot;Integrating Phosphate Enhances Biomineralization Effect of Methacrylate Cement in Vital Pulp Treatment with Improved Human Dental Pulp Stem Cells Stimulation.&quot; Advanced Healthcare Materials. 2024;13(31):e2402397. (IF: 11.0, JCR Top 9%)</p></article>
-<article class="publication"><span class="publication-number">5</span><p>Wu C, Mangal U, Seo JY, Kim H, Bai N, Cha JY, Lee KJ, Kwon JS, Choi SH*. &quot;Enhancing biofilm resistance and preserving optical translucency of 3D printed clear aligners through carboxybetaine- copolymer surface treatment.&quot; Dental Materials. 2024;40(10):1575-1583. (IF: 6.3, JCR Top 4%)</p></article>
-<article class="publication"><span class="publication-number">6</span><p>Jung S, Yong H, Lee M, Kim B, Kang TY, Jang HS, Choi WJ, Kim D, Choi M, Bang G, Hwang H, Choi SH*, Hong J, Lee S. &quot;Unraveling the Missing Link of Bio-Electrical Stimulation from Body- Mediated Energy Transfer.&quot; Advanced Functional Materials. 2023;33(36):2302465. (IF: 19.9, JCR Top 5%)</p></article>
-<article class="publication"><span class="publication-number">7</span><p>Choi W, Mangal U, Park JY, Kim JY, Jun T, Jung JW, Choi M, Jung S, Lee M, Na JY, Ryu DY, Kim JM, Kwon JS, Koh WG, Lee S, Hwang PTJ, Lee KJ, Jung UW, Cha JK, Choi SH*, Hong J. &quot;Occlusive membranes for guided regeneration of inflamed tissue defects.&quot; Nature Communications. 2023;14(1):7687. (IF: 18.1, JCR Top 6%)</p></article>
-<article class="publication"><span class="publication-number">8</span><p>Jin J, Mangal U, Seo JY, Kim JY, Ryu JH, Lee YH, Lugtu C, Hwang G, Cha JY, Lee KJ, Yu HS, Kim KM, Jang S, Kwon JS, Choi SH*. &quot;Cerium oxide nanozymes confer a cytoprotective and bio- friendly surface micro-environment to methacrylate based oro-facial prostheses.&quot; Biomaterials. 2023;296:122063. (IF: 13.6, JCR Top 6%)</p></article>
-<article class="publication"><span class="publication-number">9</span><p>Kim JY, Choi W, Mangal U, Seo JY, Kang TY, Lee J, Kim T, Cha JY, Lee KJ, Kim KM, Kim JM, Kim D, Kwon JS, Hong J, Choi SH*. &quot;Multivalent network modifier upregulates bioactivity of multispecies biofilm-resistant polyalkenoate cement.&quot; Bioactive Materials. 2022;14:219-233. (IF: 23.6, JCR Top 2%)</p></article>
-<article class="publication"><span class="publication-number">10</span><p>Choi W, Park S, Kwon JS, Jang EY, Kim JY, Heo J, Hwang Y, Kim BS, Moon JH, Jung S, Choi SH*, Lee H, Ahn HW, Hong J. &quot;Reverse Actuation of Polyelectrolyte Effect for In Vivo Antifouling.&quot; ACS Nano. 2021;15(4):6811-6828. (IF: 17.3, JCR Top 6%)</p></article>
-<article class="publication"><span class="publication-number">11</span><p>Lee MJ, Kwon JS, Kim JY, Ryu JH, Seo JY, Jang S, Kim KM, Hwang CJ, Choi SH*. Bioactive resin-based composite with surface pre-reacted glass-ionomer filler and zwitterionic material to prevent the formation of multi-species biofilm. Dental Materials. 2019;35(9):1331-1341. (IF: 6.3, JCR Top 4%)</p></article>
-<h3 class="subsection-title">Selected Peer-Reviewed Publications (As First or Corresponding Author)</h3>
-<h4 class="year-heading">2026</h4>
-<article class="publication"><span class="publication-number">1</span><p>Choi EA, Shim EA, Youn JH, Mangal U, Kim H, Choi SH*. Skeletal and biological predictors of chin soft-tissue thickness and curvature radius in Korean pediatric patients: A cone-beam computed tomography and 3-dimensional facial scanning study. Am J Orthod Dentofacial Orthop. 2026. In Press (Accepted).</p></article>
-<article class="publication"><span class="publication-number">2</span><p>Kim MJ, Seo JY, Mangal U, Choi SH*. Inhibition of cariogenic biofilms by a zinc-doped phosphate- based glass orthodontic adhesive. BMC Oral Health. 2026. In Press (Accepted).</p></article>
-<article class="publication"><span class="publication-number">3</span><p>Ryu JH, Mangal U, Kim JH, Kwon JS, Kim KW, Choi SH*. Dose-dependent effects of zinc oxide nanoparticles on pre-osteoblast cellular response. Sci Rep. 2026. In Press (Accepted).</p></article>
-<article class="publication"><span class="publication-number">4</span><p>Yu JH, Mangal U, Liu J, Kim JH, Yu HS, Lee KJ, Kwon JS, Choi SH*, Cha JY. Influence of restorative material types on 3D printed aligner accuracy using intraoral scanners. BMC Oral Health. 2026. In Press (Accepted).</p></article>
-<article class="publication"><span class="publication-number">5</span><p>Mangal U, Jinn H, Hyun CM, Kim H, Cha JY, Lee KJ, Choi SH*. Facial surface tracing approach to reduce the observation errors in 3D curvilinear landmark annotations on cone-beam computed tomography images. J Dent. 2026;168:106575.</p></article>
-<article class="publication"><span class="publication-number">6</span><p>Kim GT, Mangal U, Yu JH, Kim JE, Hwang G, Kwon JS, Choi SH*. Comparative Analysis of the Mechanical, Surface, and Dimensional Properties of 3D-Printed Aligners: Influence of Printer Type and Nitrogen-Assisted Post-Curing. Orthod Craniofac Res. 2026. In Press (Accepted).</p></article>
-<article class="publication"><span class="publication-number">7</span><p>Ryu JH, Byun SY, Mangal U, Kim JH, Yoo J, Kim KW, Kwon JS, Choi SH*. Calcium silicate cement with phosphate-based glass for enhanced osteogenic activity and mechanical strength. Clin Oral Investig. 2026;30(5):187.</p></article>
-<article class="publication"><span class="publication-number">8</span><p>Choi EA, Shin Y, Yu JH, Kim J, Mangal U, Kim JY, Choi SH*. Clinical acceptability and repeatability of three-dimensional maxillary positioning following orthognathic surgical wafer placement: An in vitro study. J Dent. 2026;167:106536.</p></article>
-<article class="publication"><span class="publication-number">9</span><p>Andrew Choi EH, Mangal U, Ryu JH, Kim JH, Hwang G, Kim H, Cha JY, Lee KJ, Choi SH*. Changes in the cytocompatibility, surface hardness, and surface topography of 3-dimensional-printed clear aligners after clinical use. Am J Orthod Dentofacial Orthop. 2026;169(2):168-176.</p></article>
-<article class="publication"><span class="publication-number">10</span><p>Park YS, Andrew Choi EH, Jamal H Alwaznah F, Kim H, Choi YJ, Lee KJ, Yu HS, Choi SH*. Is apex position a determining factor in the orthodontic traction duration of unilateral impacted maxillary canines? A cone-beam computed tomography-based 3-dimensional study. Am J Orthod Dentofacial Orthop. 2026;169(2):168-176. 2025</p></article>
-<article class="publication"><span class="publication-number">11</span><p>Wu C, Mangal U, Bai N, Kim H, Hwang G, Cha JY, Lee KJ, Kwon JS, Choi SH*. Effects of printing layer thickness and build orientation on the mechanical properties and color stability of 3D-printed clear aligners. Angle Orthod. 2025;95(4):355-361.</p></article>
-<article class="publication"><span class="publication-number">12</span><p>Choi W, Mangal U, Park H, Lee M, Tran NQ, Lee KJ, Thi PL, Kimm H, Choi SH*, Hong J. Biodegradation of 𝛽-Sheet Crystal-Rich Silk Fibroin Bioplastic Promoted by Functionally Active Soil Microbiome. ACS EST Engg. 2025;5(11):3423-3433.</p></article>
-<article class="publication"><span class="publication-number">13</span><p>Ryu JH, Mangal U, Kim JH, Yang DJ, Lee KJ, Choi YH, Shin DM, Choi SH*, Kim KW. SHLP2 restores pre-osteoblastic cells against oxidative stress-induced inflammaging. Sci Rep. 2025;16(1):938.</p></article>
-<article class="publication"><span class="publication-number">14</span><p>Kim YN, Choi EA, Mangal U, Yu JH, Cha JY, Park SH, Kim JY, Choi SH*, Yu HS. Soft tissue thickness changes in the lower face following bimaxillary surgery with advancement genioplasty in skeletal Class III malocclusion. BMC Oral Health. 2025;26(1):45.</p></article>
-<article class="publication"><span class="publication-number">15</span><p>Kim MJ, Kim E, Mangal U, Seo JY, Cha JY, Lee KJ, Choi YJ, Kwon JS, Yu HS, Choi SH*. Biofilm- resistant zwitterionic resin-based adhesive for orthodontic bracket-tooth interfaces: an in vitro evaluation. Clin Oral Investig. 2025;29(10):478. 2024</p></article>
-<article class="publication"><span class="publication-number">16</span><p>Choi EA, Bae JH, Lee S, Kim JH, Nguyen LP, Kim JY, Choi SH*. Multidisciplinary approach to occlusal rehabilitation in a patient with true hemifacial hyperplasia and temporomandibular joint ankylosis: a case report. BMC Oral Health. 2024;24(1):1525.</p></article>
-<article class="publication"><span class="publication-number">17</span><p>Bae JH, Mangal U, Yu JH, Cha JY, Yu HS, Lee KJ, Choi SH*. Retention efficacy and patient experience with customized clear retainer and wrap-around circumferential retainer among non- extraction orthodontic patients: A 12-month follow-up cohort study. Orthod Craniofac Res. 2024;27(6):928-937.</p></article>
-<article class="publication"><span class="publication-number">18</span><p>Nam SH, Cha JY, Lee KJ, Lee SH, Choi SH*, Yu HS. Factors affecting unusual postoperative vertical downward movement of mandible after surgery-first approach using intraoral vertical ramus osteotomy. BMC Oral Health. 2024;24(1):1203.</p></article>
-<article class="publication"><span class="publication-number">19</span><p>Kim MJ, Mangal U, Seo JY, Kim JY, Kim JY, Ryu JH, Kim HJ, Lee KJ, Kwon JS, Choi SH*. A novel zwitterion incorporated Nano-crystalline ceramic and polymer for bacterial resistant dental CAD-CAM block. J Dent. 2024;148:105054.</p></article>
-<article class="publication"><span class="publication-number">20</span><p>Kim JE, Mangal U, Yu JH, Kim GT, Kim H, Seo JY, Cha JY, Lee KJ, Kwon JS, Choi SH*. Evaluation of the effects of temperature and centrifugation time on elimination of uncured resin from 3D-printed dental aligners. Sci Rep. 2024;14(1):15206.</p></article>
-<article class="publication"><span class="publication-number">21</span><p>Ryu JH, Mangal U, Yoo J, Youm JH, Kim JY, Seo JY, Kim D, Kwon JS, Choi SH*. Low concentration zinc oxide nanoparticles enrichment enhances bacterial and pro-inflammatory resistance of calcium silicate-based cements. J Mech Behav Biomed Mater. 2024;151:106399. 2023</p></article>
-<article class="publication"><span class="publication-number">22</span><p>Wu C, Mangal U, Kim J, Lee KJ, Cha JY, Kwon JS, Choi SH*. Quantitative light-induced fluorescence enables effective detection of orthodontic adhesive residues in diverse environments. Photodiagnosis Photodyn Ther. 2023;44:103743.</p></article>
-<article class="publication"><span class="publication-number">23</span><p>Kim MJ, Seo JY, Jung IJ, Mangal U, Kim HJ, Lee KJ, Lee MJ, Kwon JS, Choi SH*. A novel orthodontic adhesive containing zinc-doped phosphate-based glass for preventing white spot lesions. J Dent. 2023;137:104689.</p></article>
-<article class="publication"><span class="publication-number">24</span><p>Ryu JH, Mangal U, Lee MJ, Seo JY, Jeong IJ, Park JY, Na JY, Lee KJ, Yu HS, Cha JK, Kwon JS, Choi SH*. Effect of strontium substitution on functional activity of phosphate-based glass. Biomater Sci. 2023;11(18):6299-6310.</p></article>
-<article class="publication"><span class="publication-number">25</span><p>Kim H, Kim CS, Lee JM, Lee JJ, Lee J, Kim JS, Choi SH*. Prediction of Fishman&#x27;s skeletal maturity indicators using artificial intelligence. Sci Rep. 2023;13(1):5870.</p></article>
-<article class="publication"><span class="publication-number">26</span><p>Mangal U, Noh K, Lee S, Cha JK, Song JS, Cha JY, Lee KJ, Kim KM, Kwon JS, Choi SH*. Multistability and hysteresis in states of oral microbiota: Is it impacting the dental clinical cohort studies? J Periodontal Res. 2023;58(2):381-391.</p></article>
-<article class="publication"><span class="publication-number">27</span><p>Wu C, Kim MJ, Mangal U, Seo JY, Kim JY, Kim J, Park JY, Kwon JS, Choi SH*. Effect of bacterial resistant zwitterionic derivative incorporation on the physical properties of resin-modified glass ionomer luting cement. Sci Rep. 2023;13(1):3589.</p></article>
-<article class="publication"><span class="publication-number">28</span><p>Mangal U, Lee SM, Lee S, Cha JY, Lee KJ, Yu HS, Jung H, Choi SH*. Reorientation methodology for reproducible head posture in serial cone beam computed tomography images. Sci Rep. 2023;13(1):3220.</p></article>
-<article class="publication"><span class="publication-number">29</span><p>Lee Y, Lee JM, Park SH, Choi YJ, Choi SH*, Hwang JJ, Yu HS. Three-dimensional soft tissue landmark detection with marching cube algorithm. Sci Rep. 2023;13(1):1544.</p></article>
-<article class="publication"><span class="publication-number">30</span><p>Kim H, Kim JS, Kim CS, Becker-Weimann SY, Cha JY, Choi SH*. Skin irritation in children undergoing orthodontic facemask therapy. Sci Rep. 2023;13(1):2200.</p></article>
-<article class="publication"><span class="publication-number">31</span><p>Mangal U, Seo JY, Ryu JH, Jin J, Wu C, Cha JY, Lee KJ, Yu HS, Kim KM, Kwon JS, Choi SH*. Changes in mechanical and bacterial properties of denture base resin following nanoceria incorporation with and without SBA-15 carriers. J Mech Behav Biomed Mater. 2023;138:105634.</p></article>
-<article class="publication"><span class="publication-number">32</span><p>Mangal U, Kang TY, Jung JW, Kim JY, Seo JY, Cha JY, Lee KJ, Yu HS, Kim KM, Kim JM, Kwon JS, Choi SH*. Polybetaine-enhanced hybrid ionomer cement shows improved total biological effect with bacterial resistance and cellular stimulation. Biomater Sci. 2023;11(2):554-566. 2020 - 2022</p></article>
-<article class="publication"><span class="publication-number">33</span><p>Lee MJ, Kim MJ, Mangal U, Seo JY, Kwon JS, Choi SH*. Zinc-modified phosphate-based glass micro-filler improves Candida albicans resistance of auto-polymerized acrylic resin without altering mechanical performance. Sci Rep. 2022;12(1):19456.</p></article>
-<article class="publication"><span class="publication-number">34</span><p>Yang JS, Cha JY, Lee JY, Choi SH*. Radiographical characteristics and traction duration of impacted maxillary canine requiring surgical exposure and orthodontic traction: a cross-sectional study. Sci Rep. 2022;12(1):19183.</p></article>
-<article class="publication"><span class="publication-number">35</span><p>Jin J, Bhat R, Mangal U, Seo JY, Min Y, Yu J, Kim DE, Kuroda K, Kwon JS, Choi SH*. Molecular weight tuning optimizes poly(2-methoxyethyl acrylate) dispersion to enhance the aging resistance and anti-fouling behavior of denture base resin. Biomater Sci. 2022;10(9):2224-2236.</p></article>
-<article class="publication"><span class="publication-number">36</span><p>Mangal U, Arum H, Huisoo K, Jung YH, Lee KJ, Yu HS, Hwang JJ, Choi SH*. Tomographic similarity scan with a computed modified absolute mandibular midsagittal plane for precise and objective localization of mandibular asymmetry. Comput Biol Med. 2021;134:104465.</p></article>
-<article class="publication"><span class="publication-number">37</span><p>Choi SH, Jeon JY, Lee KJ, Hwang CJ. Clinical applications of miniscrews that broaden the scope of non-surgical orthodontic treatment. Orthod Craniofac Res. 2021;24 Suppl 1:48-58.</p></article>
-<article class="publication"><span class="publication-number">38</span><p>Choi SH, Shin J, Cha JK, Kwon JS, Cha JY, Hwang CJ. Evaluation of success rate and biomechanical stability of ultraviolet-photofunctionalized miniscrews with short lengths. Am J Orthod Dentofacial Orthop. 2021;159(2):158-166.</p></article>
-<article class="publication"><span class="publication-number">39</span><p>Choi SH, Lee H, Hwang JJ, Jung HD, Hwang CJ, Cha JY. Differences in soft-tissue thickness changes after bimaxillary surgery between patients with vertically high angle and normal angle. Am J Orthod Dentofacial Orthop. 2021;159(1):30-40.</p></article>
-<article class="publication"><span class="publication-number">40</span><p>Mangal U, Min YJ, Seo JY, Kim DE, Cha JY, Lee KJ, Kwon JS, Choi SH*. Changes in tribological and antibacterial properties of poly(methyl methacrylate)-based 3D-printed intra-oral appliances by incorporating nanodiamonds. J Mech Behav Biomed Mater. 2020;110:103992.</p></article>
-<article class="publication"><span class="publication-number">41</span><p>Baik WK, Baik HS, Choi SH*. Comprehensive orthodontic treatment of a young girl with an odontogenic keratocyst and impacted teeth in the mandible. Korean J Orthod. 2020;50(1):63-71. 2015 - 2019</p></article>
-<article class="publication"><span class="publication-number">42</span><p>Kim D, Lee MJ, Kim JY, Lee D, Kwon JS, Choi SH*. Incorporation of zwitterionic materials into light-curable fluoride varnish for biofilm inhibition and caries prevention. Sci Rep. 2019;9(1):19550.</p></article>
-<article class="publication"><span class="publication-number">43</span><p>Choi SH, Ryu JH, Kwon JS, Kim JE, Cha JY, Lee KJ, Yu HS, Choi EH, Kim KM, Hwang CJ. Effect of wet storage on the bioactivity of ultraviolet light- and non-thermal atmospheric pressure plasma- treated titanium and zirconia implant surfaces. Mater Sci Eng C Mater Biol Appl. 2019;105:110049.</p></article>
-<article class="publication"><span class="publication-number">44</span><p>Kwon SM, Hwang JJ, Jung YH, Cho BH, Lee KJ, Hwang CJ, Choi SH*. Similarity index for intuitive assessment of three-dimensional facial asymmetry. Sci Rep. 2019;9(1):10959.</p></article>
-<article class="publication"><span class="publication-number">45</span><p>Kwon JS, Lee MJ, Kim JY, Kim D, Ryu JH, Jang S, Kim KM, Hwang CJ, Choi SH*. Novel anti- biofouling light-curable fluoride varnish containing 2-methacryloyloxyethyl phosphorylcholine to prevent enamel demineralization. Sci Rep. 2019;9(1):1432.</p></article>
-<article class="publication"><span class="publication-number">46</span><p>Choi SH, Jeong WS, Cha JY, Lee JH, Lee KJ, Yu HS, Choi EH, Kim KM, Hwang CJ. Effect of the ultraviolet light treatment and storage methods on the biological activity of a titanium implant surface. Dent Mater. 2017;33(12):1426-1435.</p></article>
-<article class="publication"><span class="publication-number">47</span><p>Choi SH, Jeong WS, Cha JY, Lee JH, Lee KJ, Yu HS, Choi EH, Kim KM, Hwang CJ. Overcoming the biological aging of titanium using a wet storage method after ultraviolet treatment. Sci Rep. 2017;7(1):3833.</p></article>
-<article class="publication"><span class="publication-number">48</span><p>Choi SH, Fan D, Hwang MS, Lee HK, Hwang CJ. Effect of growth hormone treatment on craniofacial growth in children: Idiopathic short stature versus growth hormone deficiency. J Formos Med Assoc. 2017;116(4):313-321.</p></article>
-<article class="publication"><span class="publication-number">49</span><p>Choi SH, Kim JS, Kim CS, Yu HS, Hwang CJ. Cone-beam computed tomography for the assessment of root-crown ratios of the maxillary and mandibular incisors in a Korean population. Korean J Orthod. 2017;47(1):39-49.</p></article>
-<article class="publication"><span class="publication-number">50</span><p>Choi SH, Jung SN, Cha JY, Hu KS, Kim KD, Baik HS, Hwang CJ. Changes in the craniofacial complex and alveolar bone height of young adults: Applications to dental medicine. Clin Anat. 2016;29(8):1011-1017.</p></article>
-<article class="publication"><span class="publication-number">51</span><p>Choi SH, Kang DY, Cha JY, Jung YS, Baik HS, Hwang CJ. Is There a Difference in Stability After Intraoral Vertical Ramus Osteotomy Between Vertically High-Angle and Normal-Angle Patients? J Oral Maxillofac Surg. 2016;74(11):2252-2260.</p></article>
-<article class="publication"><span class="publication-number">52</span><p>Choi SH, Yoo HJ, Lee JY, Jung YS, Choi JW, Lee KJ. Stability of pre-orthodontic orthognathic surgery depending on mandibular surgical techniques: SSRO vs IVRO. J Craniomaxillofac Surg. 2016;44(9):1209-15.</p></article>
-<article class="publication"><span class="publication-number">53</span><p>Choi SH, Shi KK, Cha JY, Park YC, Lee KJ. Nonsurgical miniscrew-assisted rapid maxillary expansion results in acceptable stability in young adults. Angle Orthod. 2016;86(5):713-20.</p></article>
-<article class="publication"><span class="publication-number">54</span><p>Choi SH, Kim SJ, Lee KJ, Sung SJ, Chun YS, Hwang CJ. Stress distributions in peri-miniscrew areas from cylindrical and tapered miniscrews inserted at different angles. Korean J Orthod. 2016;46(4):189-98.</p></article>
-<article class="publication"><span class="publication-number">55</span><p>Choi SH, Kim YH, Lee KJ, Hwang CJ. Effect of labiolingual inclination of a maxillary central incisor and surrounding alveolar bone loss on periodontal stress: A finite element analysis. Korean J Orthod. 2016;46(3):155-62.</p></article>
-<article class="publication"><span class="publication-number">56</span><p>Choi SH, Kang DY, Cha JY, Jung YS, Yu HS, Park HS, Hwang CJ. Major factors contributing to anterior and posterior relapse after intraoral vertical ramus osteotomy. J Craniomaxillofac Surg. 2016;44(4):413-20.</p></article>
-<article class="publication"><span class="publication-number">57</span><p>Choi SH, Cha JY, Park HS, Hwang CJ. Intraoral Vertical Ramus Osteotomy Results in Good Long- Term Mandibular Stability in Patients With Mandibular Prognathism and Anterior Open Bite. J Oral Maxillofac Surg. 2016;74(4):804-10.</p></article>
-<article class="publication"><span class="publication-number">58</span><p>Choi SH, Kim JS, Cha JY, Hwang CJ. Effect of malocclusion severity on oral health-related quality of life and food intake ability in a Korean population. Am J Orthod Dentofacial Orthop. 2016;149(3):384-90.</p></article>
-<article class="publication"><span class="publication-number">59</span><p>Choi SH, Hwang CJ, Baik HS, Jung YS, Lee KJ. Stability of Pre-Orthodontic Orthognathic Surgery Using Intraoral Vertical Ramus Osteotomy Versus Conventional Treatment. J Oral Maxillofac Surg. 2016;74(3):610-9.</p></article>
-<article class="publication"><span class="publication-number">60</span><p>Choi SH, Jang SH, Cha JY, Hwang CJ. Evaluation of the surface characteristics of anodic oxidized miniscrews and their impact on biomechanical stability: An experimental study in beagle dogs. Am J Orthod Dentofacial Orthop. 2016;149(1):31-8.</p></article>
-<article class="publication"><span class="publication-number">61</span><p>Choi SH, Won JH, Cha JY, Hwang CJ. Effect of Audiovisual Treatment Information on Relieving Anxiety in Patients Undergoing Impacted Mandibular Third Molar Removal. J Oral Maxillofac Surg. 2015;73(11):2087-92.</p></article>
-<article class="publication"><span class="publication-number">62</span><p>Choi SH, Kim BI, Cha JY, Hwang CJ. Impact of malocclusion and common oral diseases on oral health-related quality of life in young adults. Am J Orthod Dentofacial Orthop. 2015;147(5):587-95.</p></article>
+          <div class="section-header">
+            <h2>Peer-Reviewed Publications</h2>
+            <p>Peer-reviewed journal articles &amp; research papers</p>
+          </div>
+
+          <div class="subsection-header">Selected High-Impact Publications (As Corresponding Author)</div>
+
+          <article class="publication-item">
+            <span class="publication-num">1</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi W, Mangal U, Cha JK, Cho H, Ryu JH, Kim JY, Koh WG, Lee KJ, Kim KW, <strong>Choi SH*</strong>, Traverso G, Hong J.</span>
+              <span class="publication-title">"A Mucosa-Inspired Dynamic Biointerface Engineering a Biofilm-Preventive Niche against Pathogenic Microbiome Dysbiosis."</span>
+              <span class="publication-journal">Advanced Materials. 2026.</span>
+              <div class="publication-meta">
+                <span class="badge-status">In Press (Accepted)</span>
+                <span class="badge-impact">IF: 29.1</span>
+                <span class="badge-jcr">JCR Top 2%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">2</span>
+            <div class="publication-content">
+              <span class="publication-authors">Lee MY, Mangal U, Yoon HW, Im H, <strong>Choi SH*</strong>, Kwon JS, Shin SJ.</span>
+              <span class="publication-title">"Microfluidic pulp platform with vascular integration to evaluate biofunctional material."</span>
+              <span class="publication-journal">Biomaterials. 2026;334:124221.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 13.6</span>
+                <span class="badge-jcr">JCR Top 6%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">3</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi W, Mangal U, Yu JH, Ryu JH, Kim JY, Jun T, Lee Y, Cho H, Choi M, Lee M, Ryu DY, Lee SY, Jung SY, Cha JK, Cha JY, Lee KJ, Lee S, <strong>Choi SH*</strong>, Hong J.</span>
+              <span class="publication-title">"Viscoelastic and antimicrobial dental care bioplastic with recyclable life cycle."</span>
+              <span class="publication-journal">Nature Communications. 2024;15(1):9205.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 18.1</span>
+                <span class="badge-jcr">JCR Top 6%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">4</span>
+            <div class="publication-content">
+              <span class="publication-authors">Ryu JH, Mangal U, Kwon JS, Seo JY, Byun SY, Lee YH, Jang S, Hwang G, Ku H, Shin Y, Kim D, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Integrating Phosphate Enhances Biomineralization Effect of Methacrylate Cement in Vital Pulp Treatment with Improved Human Dental Pulp Stem Cells Stimulation."</span>
+              <span class="publication-journal">Advanced Healthcare Materials. 2024;13(31):e2402397.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 11.0</span>
+                <span class="badge-jcr">JCR Top 9%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">5</span>
+            <div class="publication-content">
+              <span class="publication-authors">Wu C, Mangal U, Seo JY, Kim H, Bai N, Cha JY, Lee KJ, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Enhancing biofilm resistance and preserving optical translucency of 3D printed clear aligners through carboxybetaine- copolymer surface treatment."</span>
+              <span class="publication-journal">Dental Materials. 2024;40(10):1575-1583.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 6.3</span>
+                <span class="badge-jcr">JCR Top 4%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">6</span>
+            <div class="publication-content">
+              <span class="publication-authors">Jung S, Yong H, Lee M, Kim B, Kang TY, Jang HS, Choi WJ, Kim D, Choi M, Bang G, Hwang H, <strong>Choi SH*</strong>, Hong J, Lee S.</span>
+              <span class="publication-title">"Unraveling the Missing Link of Bio-Electrical Stimulation from Body- Mediated Energy Transfer."</span>
+              <span class="publication-journal">Advanced Functional Materials. 2023;33(36):2302465.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 19.9</span>
+                <span class="badge-jcr">JCR Top 5%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">7</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi W, Mangal U, Park JY, Kim JY, Jun T, Jung JW, Choi M, Jung S, Lee M, Na JY, Ryu DY, Kim JM, Kwon JS, Koh WG, Lee S, Hwang PTJ, Lee KJ, Jung UW, Cha JK, <strong>Choi SH*</strong>, Hong J.</span>
+              <span class="publication-title">"Occlusive membranes for guided regeneration of inflamed tissue defects."</span>
+              <span class="publication-journal">Nature Communications. 2023;14(1):7687.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 18.1</span>
+                <span class="badge-jcr">JCR Top 6%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">8</span>
+            <div class="publication-content">
+              <span class="publication-authors">Jin J, Mangal U, Seo JY, Kim JY, Ryu JH, Lee YH, Lugtu C, Hwang G, Cha JY, Lee KJ, Yu HS, Kim KM, Jang S, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Cerium oxide nanozymes confer a cytoprotective and bio- friendly surface micro-environment to methacrylate based oro-facial prostheses."</span>
+              <span class="publication-journal">Biomaterials. 2023;296:122063.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 13.6</span>
+                <span class="badge-jcr">JCR Top 6%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">9</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim JY, Choi W, Mangal U, Seo JY, Kang TY, Lee J, Kim T, Cha JY, Lee KJ, Kim KM, Kim JM, Kim D, Kwon JS, Hong J, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Multivalent network modifier upregulates bioactivity of multispecies biofilm-resistant polyalkenoate cement."</span>
+              <span class="publication-journal">Bioactive Materials. 2022;14:219-233.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 23.6</span>
+                <span class="badge-jcr">JCR Top 2%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">10</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi W, Park S, Kwon JS, Jang EY, Kim JY, Heo J, Hwang Y, Kim BS, Moon JH, Jung S, <strong>Choi SH*</strong>, Lee H, Ahn HW, Hong J.</span>
+              <span class="publication-title">"Reverse Actuation of Polyelectrolyte Effect for In Vivo Antifouling."</span>
+              <span class="publication-journal">ACS Nano. 2021;15(4):6811-6828.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 17.3</span>
+                <span class="badge-jcr">JCR Top 6%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">11</span>
+            <div class="publication-content">
+              <span class="publication-authors">Lee MJ, Kwon JS, Kim JY, Ryu JH, Seo JY, Jang S, Kim KM, Hwang CJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Bioactive resin-based composite with surface pre-reacted glass-ionomer filler and zwitterionic material to prevent the formation of multi-species biofilm."</span>
+              <span class="publication-journal">Dental Materials. 2019;35(9):1331-1341.</span>
+              <div class="publication-meta">
+                <span class="badge-impact">IF: 6.3</span>
+                <span class="badge-jcr">JCR Top 4%</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="subsection-header">Selected Peer-Reviewed Publications (As First or Corresponding Author)</div>
+
+          <h4 class="year-heading">2026</h4>
+
+          <article class="publication-item">
+            <span class="publication-num">1</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi EA, Shim EA, Youn JH, Mangal U, Kim H, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Skeletal and biological predictors of chin soft-tissue thickness and curvature radius in Korean pediatric patients: A cone-beam computed tomography and 3-dimensional facial scanning study."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2026.</span>
+              <div class="publication-meta"><span class="badge-status">In Press (Accepted)</span></div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">2</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim MJ, Seo JY, Mangal U, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Inhibition of cariogenic biofilms by a zinc-doped phosphate- based glass orthodontic adhesive."</span>
+              <span class="publication-journal">BMC Oral Health. 2026.</span>
+              <div class="publication-meta"><span class="badge-status">In Press (Accepted)</span></div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">3</span>
+            <div class="publication-content">
+              <span class="publication-authors">Ryu JH, Mangal U, Kim JH, Kwon JS, Kim KW, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Dose-dependent effects of zinc oxide nanoparticles on pre-osteoblast cellular response."</span>
+              <span class="publication-journal">Sci Rep. 2026.</span>
+              <div class="publication-meta"><span class="badge-status">In Press (Accepted)</span></div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">4</span>
+            <div class="publication-content">
+              <span class="publication-authors">Yu JH, Mangal U, Liu J, Kim JH, Yu HS, Lee KJ, Kwon JS, <strong>Choi SH*</strong>, Cha JY.</span>
+              <span class="publication-title">"Influence of restorative material types on 3D printed aligner accuracy using intraoral scanners."</span>
+              <span class="publication-journal">BMC Oral Health. 2026.</span>
+              <div class="publication-meta"><span class="badge-status">In Press (Accepted)</span></div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">5</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Jinn H, Hyun CM, Kim H, Cha JY, Lee KJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Facial surface tracing approach to reduce the observation errors in 3D curvilinear landmark annotations on cone-beam computed tomography images."</span>
+              <span class="publication-journal">J Dent. 2026;168:106575.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">6</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim GT, Mangal U, Yu JH, Kim JE, Hwang G, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Comparative Analysis of the Mechanical, Surface, and Dimensional Properties of 3D-Printed Aligners: Influence of Printer Type and Nitrogen-Assisted Post-Curing."</span>
+              <span class="publication-journal">Orthod Craniofac Res. 2026.</span>
+              <div class="publication-meta"><span class="badge-status">In Press (Accepted)</span></div>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">7</span>
+            <div class="publication-content">
+              <span class="publication-authors">Ryu JH, Byun SY, Mangal U, Kim JH, Yoo J, Kim KW, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Calcium silicate cement with phosphate-based glass for enhanced osteogenic activity and mechanical strength."</span>
+              <span class="publication-journal">Clin Oral Investig. 2026;30(5):187.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">8</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi EA, Shin Y, Yu JH, Kim J, Mangal U, Kim JY, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Clinical acceptability and repeatability of three-dimensional maxillary positioning following orthognathic surgical wafer placement: An in vitro study."</span>
+              <span class="publication-journal">J Dent. 2026;167:106536.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">9</span>
+            <div class="publication-content">
+              <span class="publication-authors">Andrew Choi EH, Mangal U, Ryu JH, Kim JH, Hwang G, Kim H, Cha JY, Lee KJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Changes in the cytocompatibility, surface hardness, and surface topography of 3-dimensional-printed clear aligners after clinical use."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2026;169(2):168-176.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">10</span>
+            <div class="publication-content">
+              <span class="publication-authors">Park YS, Andrew Choi EH, Jamal H Alwaznah F, Kim H, Choi YJ, Lee KJ, Yu HS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Is apex position a determining factor in the orthodontic traction duration of unilateral impacted maxillary canines? A cone-beam computed tomography-based 3-dimensional study."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2026;169(2):168-176.</span>
+            </div>
+          </article>
+
+          <h4 class="year-heading">2025</h4>
+
+          <article class="publication-item">
+            <span class="publication-num">11</span>
+            <div class="publication-content">
+              <span class="publication-authors">Wu C, Mangal U, Bai N, Kim H, Hwang G, Cha JY, Lee KJ, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Effects of printing layer thickness and build orientation on the mechanical properties and color stability of 3D-printed clear aligners."</span>
+              <span class="publication-journal">Angle Orthod. 2025;95(4):355-361.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">12</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi W, Mangal U, Park H, Lee M, Tran NQ, Lee KJ, Thi PL, Kimm H, <strong>Choi SH*</strong>, Hong J.</span>
+              <span class="publication-title">"Biodegradation of 𝛽-Sheet Crystal-Rich Silk Fibroin Bioplastic Promoted by Functionally Active Soil Microbiome."</span>
+              <span class="publication-journal">ACS EST Engg. 2025;5(11):3423-3433.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">13</span>
+            <div class="publication-content">
+              <span class="publication-authors">Ryu JH, Mangal U, Kim JH, Yang DJ, Lee KJ, Choi YH, Shin DM, <strong>Choi SH*</strong>, Kim KW.</span>
+              <span class="publication-title">"SHLP2 restores pre-osteoblastic cells against oxidative stress-induced inflammaging."</span>
+              <span class="publication-journal">Sci Rep. 2025;16(1):938.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">14</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim YN, Choi EA, Mangal U, Yu JH, Cha JY, Park SH, Kim JY, <strong>Choi SH*</strong>, Yu HS.</span>
+              <span class="publication-title">"Soft tissue thickness changes in the lower face following bimaxillary surgery with advancement genioplasty in skeletal Class III malocclusion."</span>
+              <span class="publication-journal">BMC Oral Health. 2025;26(1):45.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">15</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim MJ, Kim E, Mangal U, Seo JY, Cha JY, Lee KJ, Choi YJ, Kwon JS, Yu HS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Biofilm- resistant zwitterionic resin-based adhesive for orthodontic bracket-tooth interfaces: an in vitro evaluation."</span>
+              <span class="publication-journal">Clin Oral Investig. 2025;29(10):478.</span>
+            </div>
+          </article>
+
+          <h4 class="year-heading">2024</h4>
+
+          <article class="publication-item">
+            <span class="publication-num">16</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi EA, Bae JH, Lee S, Kim JH, Nguyen LP, Kim JY, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Multidisciplinary approach to occlusal rehabilitation in a patient with true hemifacial hyperplasia and temporomandibular joint ankylosis: a case report."</span>
+              <span class="publication-journal">BMC Oral Health. 2024;24(1):1525.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">17</span>
+            <div class="publication-content">
+              <span class="publication-authors">Bae JH, Mangal U, Yu JH, Cha JY, Yu HS, Lee KJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Retention efficacy and patient experience with customized clear retainer and wrap-around circumferential retainer among non- extraction orthodontic patients: A 12-month follow-up cohort study."</span>
+              <span class="publication-journal">Orthod Craniofac Res. 2024;27(6):928-937.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">18</span>
+            <div class="publication-content">
+              <span class="publication-authors">Nam SH, Cha JY, Lee KJ, Lee SH, <strong>Choi SH*</strong>, Yu HS.</span>
+              <span class="publication-title">"Factors affecting unusual postoperative vertical downward movement of mandible after surgery-first approach using intraoral vertical ramus osteotomy."</span>
+              <span class="publication-journal">BMC Oral Health. 2024;24(1):1203.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">19</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim MJ, Mangal U, Seo JY, Kim JY, Kim JY, Ryu JH, Kim HJ, Lee KJ, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"A novel zwitterion incorporated Nano-crystalline ceramic and polymer for bacterial resistant dental CAD-CAM block."</span>
+              <span class="publication-journal">J Dent. 2024;148:105054.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">20</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim JE, Mangal U, Yu JH, Kim GT, Kim H, Seo JY, Cha JY, Lee KJ, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Evaluation of the effects of temperature and centrifugation time on elimination of uncured resin from 3D-printed dental aligners."</span>
+              <span class="publication-journal">Sci Rep. 2024;14(1):15206.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">21</span>
+            <div class="publication-content">
+              <span class="publication-authors">Ryu JH, Mangal U, Yoo J, Youm JH, Kim JY, Seo JY, Kim D, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Low concentration zinc oxide nanoparticles enrichment enhances bacterial and pro-inflammatory resistance of calcium silicate-based cements."</span>
+              <span class="publication-journal">J Mech Behav Biomed Mater. 2024;151:106399.</span>
+            </div>
+          </article>
+
+          <h4 class="year-heading">2023</h4>
+
+          <article class="publication-item">
+            <span class="publication-num">22</span>
+            <div class="publication-content">
+              <span class="publication-authors">Wu C, Mangal U, Kim J, Lee KJ, Cha JY, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Quantitative light-induced fluorescence enables effective detection of orthodontic adhesive residues in diverse environments."</span>
+              <span class="publication-journal">Photodiagnosis Photodyn Ther. 2023;44:103743.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">23</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim MJ, Seo JY, Jung IJ, Mangal U, Kim HJ, Lee KJ, Lee MJ, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"A novel orthodontic adhesive containing zinc-doped phosphate-based glass for preventing white spot lesions."</span>
+              <span class="publication-journal">J Dent. 2023;137:104689.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">24</span>
+            <div class="publication-content">
+              <span class="publication-authors">Ryu JH, Mangal U, Lee MJ, Seo JY, Jeong IJ, Park JY, Na JY, Lee KJ, Yu HS, Cha JK, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Effect of strontium substitution on functional activity of phosphate-based glass."</span>
+              <span class="publication-journal">Biomater Sci. 2023;11(18):6299-6310.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">25</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim H, Kim CS, Lee JM, Lee JJ, Lee J, Kim JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Prediction of Fishman's skeletal maturity indicators using artificial intelligence."</span>
+              <span class="publication-journal">Sci Rep. 2023;13(1):5870.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">26</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Noh K, Lee S, Cha JK, Song JS, Cha JY, Lee KJ, Kim KM, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Multistability and hysteresis in states of oral microbiota: Is it impacting the dental clinical cohort studies?"</span>
+              <span class="publication-journal">J Periodontal Res. 2023;58(2):381-391.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">27</span>
+            <div class="publication-content">
+              <span class="publication-authors">Wu C, Kim MJ, Mangal U, Seo JY, Kim JY, Kim J, Park JY, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Effect of bacterial resistant zwitterionic derivative incorporation on the physical properties of resin-modified glass ionomer luting cement."</span>
+              <span class="publication-journal">Sci Rep. 2023;13(1):3589.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">28</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Lee SM, Lee S, Cha JY, Lee KJ, Yu HS, Jung H, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Reorientation methodology for reproducible head posture in serial cone beam computed tomography images."</span>
+              <span class="publication-journal">Sci Rep. 2023;13(1):3220.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">29</span>
+            <div class="publication-content">
+              <span class="publication-authors">Lee Y, Lee JM, Park SH, Choi YJ, <strong>Choi SH*</strong>, Hwang JJ, Yu HS.</span>
+              <span class="publication-title">"Three-dimensional soft tissue landmark detection with marching cube algorithm."</span>
+              <span class="publication-journal">Sci Rep. 2023;13(1):1544.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">30</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim H, Kim JS, Kim CS, Becker-Weimann SY, Cha JY, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Skin irritation in children undergoing orthodontic facemask therapy."</span>
+              <span class="publication-journal">Sci Rep. 2023;13(1):2200.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">31</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Seo JY, Ryu JH, Jin J, Wu C, Cha JY, Lee KJ, Yu HS, Kim KM, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Changes in mechanical and bacterial properties of denture base resin following nanoceria incorporation with and without SBA-15 carriers."</span>
+              <span class="publication-journal">J Mech Behav Biomed Mater. 2023;138:105634.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">32</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Kang TY, Jung JW, Kim JY, Seo JY, Cha JY, Lee KJ, Yu HS, Kim KM, Kim JM, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Polybetaine-enhanced hybrid ionomer cement shows improved total biological effect with bacterial resistance and cellular stimulation."</span>
+              <span class="publication-journal">Biomater Sci. 2023;11(2):554-566.</span>
+            </div>
+          </article>
+
+          <h4 class="year-heading">2020 – 2022</h4>
+
+          <article class="publication-item">
+            <span class="publication-num">33</span>
+            <div class="publication-content">
+              <span class="publication-authors">Lee MJ, Kim MJ, Mangal U, Seo JY, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Zinc-modified phosphate-based glass micro-filler improves Candida albicans resistance of auto-polymerized acrylic resin without altering mechanical performance."</span>
+              <span class="publication-journal">Sci Rep. 2022;12(1):19456.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">34</span>
+            <div class="publication-content">
+              <span class="publication-authors">Yang JS, Cha JY, Lee JY, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Radiographical characteristics and traction duration of impacted maxillary canine requiring surgical exposure and orthodontic traction: a cross-sectional study."</span>
+              <span class="publication-journal">Sci Rep. 2022;12(1):19183.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">35</span>
+            <div class="publication-content">
+              <span class="publication-authors">Jin J, Bhat R, Mangal U, Seo JY, Min Y, Yu J, Kim DE, Kuroda K, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Molecular weight tuning optimizes poly(2-methoxyethyl acrylate) dispersion to enhance the aging resistance and anti-fouling behavior of denture base resin."</span>
+              <span class="publication-journal">Biomater Sci. 2022;10(9):2224-2236.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">36</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Arum H, Huisoo K, Jung YH, Lee KJ, Yu HS, Hwang JJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Tomographic similarity scan with a computed modified absolute mandibular midsagittal plane for precise and objective localization of mandibular asymmetry."</span>
+              <span class="publication-journal">Comput Biol Med. 2021;134:104465.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">37</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Jeon JY, Lee KJ, Hwang CJ.</span>
+              <span class="publication-title">"Clinical applications of miniscrews that broaden the scope of non-surgical orthodontic treatment."</span>
+              <span class="publication-journal">Orthod Craniofac Res. 2021;24 Suppl 1:48-58.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">38</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Shin J, Cha JK, Kwon JS, Cha JY, Hwang CJ.</span>
+              <span class="publication-title">"Evaluation of success rate and biomechanical stability of ultraviolet-photofunctionalized miniscrews with short lengths."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2021;159(2):158-166.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">39</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Lee H, Hwang JJ, Jung HD, Hwang CJ, Cha JY.</span>
+              <span class="publication-title">"Differences in soft-tissue thickness changes after bimaxillary surgery between patients with vertically high angle and normal angle."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2021;159(1):30-40.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">40</span>
+            <div class="publication-content">
+              <span class="publication-authors">Mangal U, Min YJ, Seo JY, Kim DE, Cha JY, Lee KJ, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Changes in tribological and antibacterial properties of poly(methyl methacrylate)-based 3D-printed intra-oral appliances by incorporating nanodiamonds."</span>
+              <span class="publication-journal">J Mech Behav Biomed Mater. 2020;110:103992.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">41</span>
+            <div class="publication-content">
+              <span class="publication-authors">Baik WK, Baik HS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Comprehensive orthodontic treatment of a young girl with an odontogenic keratocyst and impacted teeth in the mandible."</span>
+              <span class="publication-journal">Korean J Orthod. 2020;50(1):63-71.</span>
+            </div>
+          </article>
+
+          <h4 class="year-heading">2015 – 2019</h4>
+
+          <article class="publication-item">
+            <span class="publication-num">42</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kim D, Lee MJ, Kim JY, Lee D, Kwon JS, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Incorporation of zwitterionic materials into light-curable fluoride varnish for biofilm inhibition and caries prevention."</span>
+              <span class="publication-journal">Sci Rep. 2019;9(1):19550.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">43</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Ryu JH, Kwon JS, Kim JE, Cha JY, Lee KJ, Yu HS, Choi EH, Kim KM, Hwang CJ.</span>
+              <span class="publication-title">"Effect of wet storage on the bioactivity of ultraviolet light- and non-thermal atmospheric pressure plasma- treated titanium and zirconia implant surfaces."</span>
+              <span class="publication-journal">Mater Sci Eng C Mater Biol Appl. 2019;105:110049.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">44</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kwon SM, Hwang JJ, Jung YH, Cho BH, Lee KJ, Hwang CJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Similarity index for intuitive assessment of three-dimensional facial asymmetry."</span>
+              <span class="publication-journal">Sci Rep. 2019;9(1):10959.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">45</span>
+            <div class="publication-content">
+              <span class="publication-authors">Kwon JS, Lee MJ, Kim JY, Kim D, Ryu JH, Jang S, Kim KM, Hwang CJ, <strong>Choi SH*</strong>.</span>
+              <span class="publication-title">"Novel anti- biofouling light-curable fluoride varnish containing 2-methacryloyloxyethyl phosphorylcholine to prevent enamel demineralization."</span>
+              <span class="publication-journal">Sci Rep. 2019;9(1):1432.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">46</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Jeong WS, Cha JY, Lee JH, Lee KJ, Yu HS, Choi EH, Kim KM, Hwang CJ.</span>
+              <span class="publication-title">"Effect of the ultraviolet light treatment and storage methods on the biological activity of a titanium implant surface."</span>
+              <span class="publication-journal">Dent Mater. 2017;33(12):1426-1435.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">47</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Jeong WS, Cha JY, Lee JH, Lee KJ, Yu HS, Choi EH, Kim KM, Hwang CJ.</span>
+              <span class="publication-title">"Overcoming the biological aging of titanium using a wet storage method after ultraviolet treatment."</span>
+              <span class="publication-journal">Sci Rep. 2017;7(1):3833.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">48</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Fan D, Hwang MS, Lee HK, Hwang CJ.</span>
+              <span class="publication-title">"Effect of growth hormone treatment on craniofacial growth in children: Idiopathic short stature versus growth hormone deficiency."</span>
+              <span class="publication-journal">J Formos Med Assoc. 2017;116(4):313-321.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">49</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kim JS, Kim CS, Yu HS, Hwang CJ.</span>
+              <span class="publication-title">"Cone-beam computed tomography for the assessment of root-crown ratios of the maxillary and mandibular incisors in a Korean population."</span>
+              <span class="publication-journal">Korean J Orthod. 2017;47(1):39-49.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">50</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Jung SN, Cha JY, Hu KS, Kim KD, Baik HS, Hwang CJ.</span>
+              <span class="publication-title">"Changes in the craniofacial complex and alveolar bone height of young adults: Applications to dental medicine."</span>
+              <span class="publication-journal">Clin Anat. 2016;29(8):1011-1017.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">51</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kang DY, Cha JY, Jung YS, Baik HS, Hwang CJ.</span>
+              <span class="publication-title">"Is There a Difference in Stability After Intraoral Vertical Ramus Osteotomy Between Vertically High-Angle and Normal-Angle Patients?"</span>
+              <span class="publication-journal">J Oral Maxillofac Surg. 2016;74(11):2252-2260.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">52</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Yoo HJ, Lee JY, Jung YS, Choi JW, Lee KJ.</span>
+              <span class="publication-title">"Stability of pre-orthodontic orthognathic surgery depending on mandibular surgical techniques: SSRO vs IVRO."</span>
+              <span class="publication-journal">J Craniomaxillofac Surg. 2016;44(9):1209-15.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">53</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Shi KK, Cha JY, Park YC, Lee KJ.</span>
+              <span class="publication-title">"Nonsurgical miniscrew-assisted rapid maxillary expansion results in acceptable stability in young adults."</span>
+              <span class="publication-journal">Angle Orthod. 2016;86(5):713-20.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">54</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kim SJ, Lee KJ, Sung SJ, Chun YS, Hwang CJ.</span>
+              <span class="publication-title">"Stress distributions in peri-miniscrew areas from cylindrical and tapered miniscrews inserted at different angles."</span>
+              <span class="publication-journal">Korean J Orthod. 2016;46(4):189-98.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">55</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kim YH, Lee KJ, Hwang CJ.</span>
+              <span class="publication-title">"Effect of labiolingual inclination of a maxillary central incisor and surrounding alveolar bone loss on periodontal stress: A finite element analysis."</span>
+              <span class="publication-journal">Korean J Orthod. 2016;46(3):155-62.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">56</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kang DY, Cha JY, Jung YS, Yu HS, Park HS, Hwang CJ.</span>
+              <span class="publication-title">"Major factors contributing to anterior and posterior relapse after intraoral vertical ramus osteotomy."</span>
+              <span class="publication-journal">J Craniomaxillofac Surg. 2016;44(4):413-20.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">57</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Cha JY, Park HS, Hwang CJ.</span>
+              <span class="publication-title">"Intraoral Vertical Ramus Osteotomy Results in Good Long- Term Mandibular Stability in Patients With Mandibular Prognathism and Anterior Open Bite."</span>
+              <span class="publication-journal">J Oral Maxillofac Surg. 2016;74(4):804-10.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">58</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kim JS, Cha JY, Hwang CJ.</span>
+              <span class="publication-title">"Effect of malocclusion severity on oral health-related quality of life and food intake ability in a Korean population."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2016;149(3):384-90.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">59</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Hwang CJ, Baik HS, Jung YS, Lee KJ.</span>
+              <span class="publication-title">"Stability of Pre-Orthodontic Orthognathic Surgery Using Intraoral Vertical Ramus Osteotomy Versus Conventional Treatment."</span>
+              <span class="publication-journal">J Oral Maxillofac Surg. 2016;74(3):610-9.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">60</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Jang SH, Cha JY, Hwang CJ.</span>
+              <span class="publication-title">"Evaluation of the surface characteristics of anodic oxidized miniscrews and their impact on biomechanical stability: An experimental study in beagle dogs."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2016;149(1):31-8.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">61</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Won JH, Cha JY, Hwang CJ.</span>
+              <span class="publication-title">"Effect of Audiovisual Treatment Information on Relieving Anxiety in Patients Undergoing Impacted Mandibular Third Molar Removal."</span>
+              <span class="publication-journal">J Oral Maxillofac Surg. 2015;73(11):2087-92.</span>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <span class="publication-num">62</span>
+            <div class="publication-content">
+              <span class="publication-authors">Choi SH, Kim BI, Cha JY, Hwang CJ.</span>
+              <span class="publication-title">"Impact of malocclusion and common oral diseases on oral health-related quality of life in young adults."</span>
+              <span class="publication-journal">Am J Orthod Dentofacial Orthop. 2015;147(5):587-95.</span>
+            </div>
+          </article>
         </section>
-      </div>
+      </main>
     </div>
-    <footer class="footer">Sung-Hwan Choi · Yonsei University College of Dentistry</footer>
-  </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>Sung-Hwan Choi, D.D.S., Ph.D. · Yonsei University College of Dentistry</div>
+      <a href="#cv-title">Back to Top ↑</a>
+    </footer>
+  </div>
 </body>
 </html>
